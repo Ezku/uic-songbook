@@ -15,16 +15,16 @@
 
 <body> 
 
-<div data-role="page">
+<div data-role="page" id="intro">
 
 	<div data-role="header">
 		<h1>Sähköläsy</h1>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#">0. Intro</a></li>
-				<li><a href="#">1. Selaa</a></li>
-				<li><a href="#">2. Muokkaa</a></li>
-				<li><a href="#">3. Julkaise</a></li>
+				<li><a href="#intro" class="ui-btn-active">0. Intro</a></li>
+				<li><a href="#browse" class="ui-disabled">1. Selaa</a></li>
+				<li><a href="#edit" class="ui-disabled">2. Muokkaa</a></li>
+				<li><a href="#publish" class="ui-disabled">3. Julkaise</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /header -->
@@ -37,6 +37,78 @@
 			<li class="ui-block-c">Julkaise</li>
 		</ol>
 		<a href="#browse" data-role="button">Aloita</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="browse">
+
+	<div data-role="header">
+		<a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+		<h1>Sähköläsy</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#intro" data-direction="reverse">0. Intro</a></li>
+				<li><a href="#browse" class="ui-btn-active">1. Selaa</a></li>
+				<li><a href="#edit" class="ui-disabled">2. Muokkaa</a></li>
+				<li><a href="#publish" class="ui-disabled">3. Julkaise</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<a href="#edit" data-role="button">Koosta läsy</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="edit">
+
+	<div data-role="header">
+		<a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+		<h1>Sähköläsy</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#intro" data-direction="reverse">0. Intro</a></li>
+				<li><a href="#browse" data-direction="reverse">1. Selaa</a></li>
+				<li><a href="#edit" class="ui-btn-active">2. Muokkaa</a></li>
+				<li><a href="#publish" class="ui-disabled">3. Julkaise</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<a href="#publish" data-role="button">Julkaise läsy</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="publish">
+
+	<div data-role="header">
+		<a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+		<h1>Sähköläsy</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#intro" data-direction="reverse">0. Intro</a></li>
+				<li><a href="#browse" data-direction="reverse">1. Selaa</a></li>
+				<li><a href="#edit" data-direction="reverse">2. Muokkaa</a></li>
+				<li><a href="#publish" class="ui-btn-active">3. Julkaise</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<a href="#intro" data-role="button">Aloita alusta</a>
 	</div><!-- /content -->
 
 	<div data-role="footer">
