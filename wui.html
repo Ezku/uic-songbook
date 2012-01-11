@@ -63,7 +63,15 @@
 		<div class="ui-block-a">
 			<h2>Lauluarkisto</h2>
 
-			<ul data-role="listview" data-inset="true">
+            <div data-role="fieldcontain">
+
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#browse" data-role="button" data-theme="b" data-transition="fade">Aakkosittain</a>
+                    <a href="#browse-category" data-role="button" data-transition="fade">Kategorioittain</a>
+                </div>
+            </div>
+            
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia...">
 				<li data-role="list-divider"><h4>A</h4></li>
 				<li>
 					<a href="#">Aamulla kun heräsin</a>
@@ -456,6 +464,412 @@
 	<div data-role="footer">
 	</div><!-- /footer -->
 
+</div><!-- /page -->
+    
+<div data-role="page" id="browse-category">
+        
+    <div data-role="header">
+        <a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+        <h1>Sähköläsy</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#intro" data-direction="reverse">0. Intro</a></li>
+                <li><a href="#browse" class="ui-btn-active">1. Selaa</a></li>
+                <li><a href="#edit" class="ui-disabled">2. Muokkaa</a></li>
+                <li><a href="#publish" class="ui-disabled">3. Julkaise</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /header -->
+        
+    <div data-role="content" class="ui-grid-a">
+        <div class="ui-block-a">
+            <h2>Lauluarkisto</h2>
+                
+            <div data-role="fieldcontain">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#browse" data-role="button" data-transition="fade">Aakkosittain</a>
+                    <a href="#browse-category" data-role="button" data-theme="b" data-transition="fade">Kategorioittain</a>
+                </div>
+            </div>
+                
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia...">
+                <li data-role="list-divider"><h4>Aatteellista</h4></li>
+                <li>
+                    <a href="#">Barrikaadilaulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Finlandia</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#suomi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Jääkärimarssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#suomi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Kotimaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#suomi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Laulu hallituksesta</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#hallitus</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Moskovalaisen ylioppilaan laulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Oi kallis Suomenmaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#suomi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Partisaanimarssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Porilaisten marssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#suomi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Punakaartilaisten marssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ryssälauma</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Sörkan sällit</a>
+                    <p class="ui-li-aside"><a href="#trol">Aatteellista</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li data-role="list-divider"><h4>Juomalauluja</h4></li>
+                <li>
+                    <a href="#">Alla borde kännä till</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Aqua Vera</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#vesi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Carillo</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#avec</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Dom som är nyktra</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#vesi</a> <a href="#dol">#viina</a> <a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Eino Leinon juomalaulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#fuksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Finsk snapsvisa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Hei veikkoset</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#veikko</a> <a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Helan går</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Internationalen</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viini</a> <a href="#dol">#olut</a> <a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Intian Q</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#soolo</a> </strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Jaloviinaa tahdon juoda</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#jallu</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Jos eukkosi kieltää</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#naiset</a> <a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Kaikille on koskenkorvaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Kaks' kisälliä</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ko-ko-ko-kosken ko-ko-ko-korvaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Koskenkorvaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Leukojen välliiin</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Livet är härligt</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#ruotsiksi</a> <a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Lärvit</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">No onkos tullut kesä - nyt!</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#laululeikki</a> <a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Nyt</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Nyt ryypätään</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Olutkaanon</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#olut</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">On lasimme nää</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Paavi ja sulttaani</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#naiset</a> <a href="#dol">#vini</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Pienet konjakit</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#konjakki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Pyöreän pöydän ritarit</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viini</a><a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Rattataa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Runebergin juomalaulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#lyhyt</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Sista punchvisan</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#ruotsiksi</a> <a href="#dol">#punssi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Vem i helvete</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#ruotsiksi</a> <a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Vesipoikien marssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#vesi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Viinaa, vettä</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#vesi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Vodka, Vodka</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#venäjä</a> <a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Yksi pikku tippa viinaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Yli koskien</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                
+                <li>
+                    <a href="#">Ölvisa</a>
+                    <p class="ui-li-aside"><a href="#trol">Juomalauluja</a> (<strong><a href="#dol">#olut</a></strong>)</p>
+                </li>
+                <li data-role="list-divider"><h4>Loppuilta</h4></li>
+                <li>
+                    <a href="#">Aamulla kun heräsin</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Bussikuski</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Dance macabre</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ei Maarintaloa lukita yöksi</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Gör mig till finlandssvensk</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Hullu kirvesmies</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a></p>
+                </li>
+                <li>
+                    <a href="#">Kalmare stad</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#ruotsiksi</a> <a href="#dol">#soolo</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Olof Palme -visan</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Pikku kakkosen posti</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ryyppää</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Santa Lucia</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Sisään!</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#viina</a> <a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Takki pois</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#takki</a> <a href="#dol">#miehet</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Undulaatti</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#laululeikki</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Vinetto</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Voi virsua voi</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Älä sylje lattialle</a>
+                    <p class="ui-li-aside"><a href="#trol">Loppuilta</a> (<strong><a href="#dol">#venäjä</a></strong>)</p>
+                </li>
+                <li data-role="list-divider"><h4>Perinteistä</h4></li>
+                <li>
+                    <a href="#">Bulevardi</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Henkilökunta</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#tarjoilua</a> <a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Hyvät ystävät</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ikuisen teekkarin laulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Ken ompi fuksi</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#fuksi</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Kuusi kulmaa</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Servin Maijan Mökki</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Teemu Teekkari</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Viimeisen teekkarin laulu</a>
+                    <p class="ui-li-aside"><a href="#trol">Perinteistä</a> (<strong><a href="#dol">#poli</a></strong>)</p>
+                </li>
+                <li data-role="list-divider"><h4>Romanttista</h4></li>
+                <li>
+                    <a href="#">Laulu meistä</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#miehet</a> <a href="#dol">#naiset</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Mera män</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#miehet</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Niin minä neitonen</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#naiset</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Nisti ja nööri</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#yliopisto</a> <a href="#dol">#koveri</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Romanssi</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#naiset</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Tila on niin kaunis</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#arkkari</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Tupakka, whisky ja villis naiset</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#tupakka</a> <a href="#dol">#tupakka</a>naiset<a href="#dol">#whisky</a> <a href="#dol">#soolo</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Älä kehrää enää</a>
+                    <p class="ui-li-aside"><a href="#trol">Romanttista</a> (<strong><a href="#dol">#poli</a> <a href="#dol">#naiset</a></strong>)</p>
+                </li>
+                <li data-role="list-divider"><h4>Tulevaisuudesta</h4></li>
+                <li>
+                    <a href="#">Elomme päivät epäselvät</a>
+                    <p class="ui-li-aside"><a href="#trol">Tulevaisuudesta</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Hauki ja muita ihmeitä</a>
+                    <p class="ui-li-aside"><a href="#trol">Tulevaisuudesta</a></p>
+                </li>
+                <li>
+                    <a href="#">Minne</a>
+                    <p class="ui-li-aside"><a href="#trol">Tulevaisuudesta</a></p>
+                </li>
+                <li>
+                    <a href="#">Tänään otetaan</a>
+                    <p class="ui-li-aside"><a href="#trol">Tulevaisuudesta</a> (<strong><a href="#dol">#viina</a></strong>)</p>
+                </li>
+                <li>
+                    <a href="#">Vart</a>
+                    <p class="ui-li-aside"><a href="#trol">Tulevaisuudesta</a> (<strong><a href="#dol">#ruotsiksi</a></strong>)</p>
+                </li>
+            </ul>
+        </div> <!-- /ui-block-a -->
+        
+        <div class="ui-block-b">
+            <h2>Kootut kappaleet</h2>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider"><h4>Yhteensä</h4> <span class="ui-li-count">14</span></li>
+                <li data-role="list-divider"><h4>Asiallista</h4> <span class="ui-li-count">1</span></li>
+                <li data-icon="delete"><a href="#">Aqua Vera</a>
+                    <p class="ui-li-aside">(<strong><a href="#">#vesi</a></strong>)</p></li>
+            </ul>
+            <a href="#edit" data-role="button" data-icon="arrow-r" data-iconpos="right">Koosta läsy</a>
+        </div>
+    </div><!-- /content -->
+        
+    <div data-role="footer">
+    </div><!-- /footer -->
+        
 </div><!-- /page -->
 
 <div data-role="page" id="edit">
