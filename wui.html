@@ -889,17 +889,16 @@
 		</div><!-- /navbar -->
 	</div><!-- /header -->
 
-    <div data-role="content" class="ui-grid-a">    
+    <div class="ui-grid-a" data-role="content">
+
+        <style>
+            .extra { font-size:10px; text-align:right; margin-top:-15px; }
+            .name { text-align:left; }
+        </style>
+
+        <div class="ui-block-a">
         
-        <div class"ui-block-a">
-            
-            <style>
-                .extra { font-size:10px; text-align:right; margin-top:-15px; }
-                .songs {width:50%; }
-                .name { text-align:left; }
-            </style>
-            
-            <ul class="songs" data-role="listview" data-inset="vtrue">
+            <ul class="songs" data-role="listview" data-inset="true">
                 <li data-role="controlgroup" data-type="horizontal">
                     <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true">Laulu hallituksesta
                         <div class="extra">Aatteellista (<strong>#venäjä</strong>)</div>
