@@ -11,6 +11,28 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.0.css" />
 	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.0.js"></script>
+	
+	<style type="text/css">
+	  h1.main {
+	    text-align: center;
+	    font-size: 600%;
+	    margin: 0.5em 0;
+	  }
+	  
+	  #instructions {
+	    text-align: center;
+	    list-style: none;
+	    margin-bottom: 3em;
+	  }
+	  
+	  .num {
+	    font-size: 600%;
+	    display: block;
+	  }
+	  
+	  .extra { font-size:10px; text-align:right; margin-top:-15px; }
+    .name { text-align:left; }
+	</style>
 </head> 
 
 <body> 
@@ -30,12 +52,21 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<h1>Sähköläsy</h1>
-		<ol class="ui-grid-b">
-			<li class="ui-block-a">Selaa</li>
-			<li class="ui-block-b">Muokkaa</li>
-			<li class="ui-block-c">Julkaise</li>
+		<h1 class="main">Sähköläsy</h1>
+		<ol class="ui-grid-b" id="instructions">
+			<li class="ui-block-a">
+			  <span class="num">1</span>
+			  <strong>Kerää biisejä</strong></li>
+			<li class="ui-block-b">
+			  <span class="num">2</span>
+			  <strong>Viimeistele läsy</strong></li>
+			<li class="ui-block-c">
+			  <span class="num">3</span>
+			  <strong>Jaa juhlakansalle</strong></li>
 		</ol>
+		<p>
+		  Foofoo
+		</p>
 		<a href="#browse" data-role="button">Aloita</a>
 	</div><!-- /content -->
 
@@ -890,19 +921,12 @@
 	</div><!-- /header -->
 
     <div class="ui-grid-a" data-role="content">
-
-        <style>
-            .extra { font-size:10px; text-align:right; margin-top:-15px; }
-            .name { text-align:left; }
-        </style>
-
-        <div class="ui-block-a">
+       <div class="ui-block-a">
         
             <ul class="songs" data-role="listview" data-inset="true">
                 <li data-role="controlgroup" data-type="horizontal">
                     <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true">Laulu hallituksesta
-                        <div class="extra">Aatteellista (<strong>#venäjä</strong>)</div>
-                    <a/>
+                        <div class="extra">Aatteellista (<strong>#venäjä</strong>)</div></a>
                     <a data-role="button" data-icon="minus" data-theme="c" data-inline="true"></a>
                 </li>
                 <li data-role="controlgroup" data-type="horizontal">
@@ -1002,7 +1026,7 @@
                 </li>
                 <li data-role="controlgroup" data-type="horizontal">
                     <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Hyvät ystävät
-                        <div class="extra">Perinteistä (<strong>#poli<</strong>)</div></a>
+                        <div class="extra">Perinteistä (<strong>#poli</strong>)</div></a>
                     <a data-role="button" data-icon="minus" data-theme="c"></a>
                 </li>
                 <li data-role="controlgroup" data-type="horizontal">
@@ -1086,7 +1110,7 @@
 
 	<div data-role="content">
         <p style="text-align:center;">
-        Olet onnistuneesti luonut oman Sähköläsysi!<br \>
+        Olet onnistuneesti luonut oman Sähköläsysi!<br />
         Seuraavaksi voit julkaista tai palata muokkaamaan juuri luomaasi läsyä alla olevien linkkien kautta.
         </p>
         <ul style="list-style-type:none; text-align:center;">

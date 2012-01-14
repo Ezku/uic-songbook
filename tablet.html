@@ -12,8 +12,16 @@
 	<script type="text/javascript" src="js/jquery.mobile-1.0.js"></script>
 	
 	<style>
-	  
+	  small {
+	    margin-left: 1em;
+	  }
 	</style>
+	
+	<script type="text/javascript">
+	  $(document).bind("mobileinit", function(){
+      $.mobile.defaultPageTransition = 'fade';
+    });
+	</script>
 </head> 
 
 <body> 
@@ -34,46 +42,69 @@
 	<div data-role="content">
 		<ul data-role="listview"  data-theme="b" data-divider-theme="d">
       <li data-role="list-divider">Pakolliset</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät</a></li>
-      <li><a href="#song">22. Ikuisen teekkarin laulu</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät
+        <small>Hyvät ystävät juhla voi alkaa...</small></a></li>
+      <li><a href="#song">22. Ikuisen teekkarin laulu
+        <small>Talvi-iltojen tummentuessa...</small></a></li>
       
       <li data-role="list-divider">Romanttiset</li>
-      <li><a href="#song">5. Niin minä neitonen</a></li>
+      <li><a href="#song">5. Niin minä neitonen
+        <small>Niin minä neitonen...</small></a></li>
       
       <li data-role="list-divider">Vesi</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera
+        <small>Lauletaanpas vedestä, jota aina riittää...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi
+        <small>Pois se meistä, että täällä maisteltais...</small></a></li>
       
       <li data-role="list-divider">Viina</li>
-      <li><a href="#song">4. Viljaviinaa</a></li>
-      <li><a href="#song">20. Tänään otetaan</a></li>
+      <li><a href="#song">4. Viljaviinaa
+        <small>Viljaviinaa, laitetaan...</small></a></li>
+      <li><a href="#song">20. Tänään otetaan
+        <small>Tänään otetaan, tänään otetaan...</small></a></li>
       
       <li data-role="list-divider">Viini</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani</a></li>
-      <li><a href="#song">12. Pyöreän pöydän ritarit</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani
+        <small>On paavin elo ihanaa...</small></a></li>
+      <li><a href="#song">12. Pyöreän pöydän ritarit
+        <small>Ritarit nuo pyöreän pöydän...</small></a></li>
       
       <li data-role="list-divider">Avec</li>
-      <li><a href="#song">19. Punschen kommer</a></li>
+      <li><a href="#song">19. Punschen kommer
+        <small>Punschen kommer, punschen kommer...</small></a></li>
       
       <li data-role="list-divider">Juomalaulut</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision</a></li>
-      <li><a href="#song">15. Henkilökunta</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää</a></li>
-      <li><a href="#song">21. Vahtimestari</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision
+        <small>Ranskassa juodaan viiniä...</small></a></li>
+      <li><a href="#song">15. Henkilökunta
+        <small>Henkilökunta, henkilökunta, paarlevuu...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää
+        <small>Ryyppää, ryyppää, ryyppää vaan...</small></a></li>
+      <li><a href="#song">21. Vahtimestari
+        <small>Hei vahtimestari, tule täytä lasini...</small></a></li>
       
       <li data-role="list-divider">Teekkarilaulut</li>
-      <li><a href="#song">6. Nisti ja nööri</a></li>
-      <li><a href="#song">10. Takki pois</a></li>
+      <li><a href="#song">6. Nisti ja nööri
+        <small>Assari kun päätti tentin, siskoistaan jäi jälkeen sentin...</small></a></li>
+      <li><a href="#song">10. Takki pois
+        <small>Nyt takki poies kiskaiskaamme...</small></a></li>
       
       <li data-role="list-divider">Loppuosa</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit</a></li>
-      <li><a href="#song">16. No onkos tullut kesä - nyt</a></li>
-      <li><a href="#song">9. Pienet käärmeet</a></li>
-      <li><a href="#song">13. Sörkän sällit</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies
+        <small>Illalla kun mielipuoli kirveen saa...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit
+        <small>Lärvit, lä-lä-lä-lärvit...</small></a></li>
+      <li><a href="#song">16. No onkos tullut kesä - nyt
+        <small>No onkos tullut kesä, nyt talven keskelle...</small></a>
+      </li>
+      <li><a href="#song">9. Pienet käärmeet
+        <small>On pieniä käärmeitä...</small></a></li>
+      <li><a href="#song">13. Sörkän sällit
+        <small>Sörnai gusha nietu Molotova...</small></a></li>
       
       <li data-role="list-divider">Muuta hauskaa</li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum
+        <small>Lorem ipsum dolor sit amet...</small></a></li>
 		</ul>
 	</div><!-- /content -->
 
@@ -94,28 +125,50 @@
 
   <div data-role="content">
     <ul data-role="listview"  data-theme="b">
-      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi</a></li>
-      <li><a href="#song">4. Viljaviinaa</a></li>
-      <li><a href="#song">5. Niin minä neitonen</a></li>
-      <li><a href="#song">6. Nisti ja nööri</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani</a></li>
-      <li><a href="#song">9. Pienet käärmeet</a></li>
-      <li><a href="#song">10. Takki pois</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision</a></li>
-      <li><a href="#song">12. Pyöreän pöydän ritarit</a></li>
-      <li><a href="#song">13. Sörkän sällit</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum</a></li>
-      <li><a href="#song">15. Henkilökunta</a></li>
-      <li><a href="#song">16. No onkos tullut kesä - nyt</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit</a></li>
-      <li><a href="#song">19. Punschen kommer</a></li>
-      <li><a href="#song">20. Tänään otetaan</a></li>
-      <li><a href="#song">21. Vahtimestari</a></li>
-      <li><a href="#song">22. Ikuisen teekkarin laulu</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät
+        <small>Hyvät ystävät juhla voi alkaa...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera
+        <small>Lauletaanpas vedestä, jota aina riittää...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi
+        <small>Pois se meistä, että täällä maisteltais...</small></a></li>
+      <li><a href="#song">4. Viljaviinaa
+        <small>Viljaviinaa, laitetaan...</small></a></li>
+      <li><a href="#song">5. Niin minä neitonen
+        <small>Niin minä neitonen...</small></a></li>
+      <li><a href="#song">6. Nisti ja nööri
+        <small>Assari kun päätti tentin, siskoistaan jäi jälkeen sentin...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies
+        <small>Illalla kun mielipuoli kirveen saa...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani
+        <small>On paavin elo ihanaa...</small></a></li>
+      <li><a href="#song">9. Pienet käärmeet
+        <small>On pieniä käärmeitä...</small></a></li>
+      <li><a href="#song">10. Takki pois
+        <small>Nyt takki poies kiskaiskaamme...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision
+        <small>Ranskassa juodaan viiniä...</small></a></li>
+      <li><a href="#song">12. Pyöreän pöydän ritarit
+        <small>Ritarit nuo pyöreän pöydän...</small></a></li>
+      <li><a href="#song">13. Sörkän sällit
+        <small>Sörnai gusha nietu Molotova...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum
+        <small>Lorem ipsum dolor sit amet...</small></a></li>
+      <li><a href="#song">15. Henkilökunta
+        <small>Henkilökunta, henkilökunta, paarlevuu...</small></a></li>
+      <li><a href="#song">16. No onkos tullut kesä - nyt
+        <small>No onkos tullut kesä, nyt talven keskelle...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää
+        <small>Ryyppää, ryyppää, ryyppää vaan...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit
+        <small>Lärvit, lä-lä-lä-lärvit...</small></a></li>
+      <li><a href="#song">19. Punschen kommer
+        <small>Punschen kommer, punschen kommer...</small></a></li>
+      <li><a href="#song">20. Tänään otetaan
+        <small>Tänään otetaan, tänään otetaan...</small></a></li>
+      <li><a href="#song">21. Vahtimestari
+        <small>Hei vahtimestari, tule täytä lasini...</small></a></li>
+      <li><a href="#song">22. Ikuisen teekkarin laulu
+        <small>Talvi-iltojen tummentuessa...</small></a></li>
     </ul>
   </div><!-- /content -->
 
@@ -136,28 +189,50 @@
 
   <div data-role="content">
     <ul data-role="listview"  data-theme="b">
-      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision</a></li>
-      <li><a href="#song">15. Henkilökunta</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät</a></li>
-      <li><a href="#song">22. Ikuisen teekkarin laulu</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit</a></li>
-      <li><a href="#song">5. Niin minä neitonen</a></li>
-      <li><a href="#song">6. Nisti ja nööri</a></li>
-      <li><a href="#song">16. No onkos tullut kesä - nyt</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani</a></li>
-      <li><a href="#song">9. Pienet käärmeet</a></li>
-      <li><a href="#song">19. Punschen kommer</a></li>
-      <li><a href="#song">12. Pyöreän pöydän ritarit</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää</a></li>
-      <li><a href="#song">13. Sörkän sällit</a></li>
-      <li><a href="#song">10. Takki pois</a></li>
-      <li><a href="#song">20. Tänään otetaan</a></li>
-      <li><a href="#song">21. Vahtimestari</a></li>
-      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi</a></li>
-      <li><a href="#song">4. Viljaviinaa</a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">2. Aqua vera
+        <small>Lauletaanpas vedestä, jota aina riittää...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">11. Eurovision
+        <small>Ranskassa juodaan viiniä...</small></a></li>
+      <li><a href="#song">15. Henkilökunta
+        <small>Henkilökunta, henkilökunta, paarlevuu...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">7. Hullu kirvesmies
+        <small>Illalla kun mielipuoli kirveen saa...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">1. Hyvät ystävät
+        <small>Hyvät ystävät juhla voi alkaa...</small></a></li>
+      <li><a href="#song">22. Ikuisen teekkarin laulu
+        <small>Talvi-iltojen tummentuessa...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">14. Lorem Ipsum
+        <small>Lorem ipsum dolor sit amet...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">18. Lärvit
+        <small>Lärvit, lä-lä-lä-lärvit...</small></a></li>
+      <li><a href="#song">5. Niin minä neitonen
+        <small>Niin minä neitonen...</small></a></li>
+      <li><a href="#song">6. Nisti ja nööri
+        <small>Assari kun päätti tentin, siskoistaan jäi jälkeen sentin...</small></a></li>
+      <li><a href="#song">16. No onkos tullut kesä - nyt
+        <small>No onkos tullut kesä, nyt talven keskelle...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">8. Paavi ja sulttaani
+        <small>On paavin elo ihanaa...</small></a></li>
+      <li><a href="#song">9. Pienet käärmeet
+        <small>On pieniä käärmeitä...</small></a></li>
+      <li><a href="#song">19. Punschen kommer
+        <small>Punschen kommer, punschen kommer...</small></a></li>
+      <li><a href="#song">12. Pyöreän pöydän ritarit
+        <small>Ritarit nuo pyöreän pöydän...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">17. Ryyppää
+        <small>Ryyppää, ryyppää, ryyppää vaan...</small></a></li>
+      <li><a href="#song">13. Sörkän sällit
+        <small>Sörnai gusha nietu Molotova...</small></a></li>
+      <li><a href="#song">10. Takki pois
+        <small>Nyt takki poies kiskaiskaamme...</small></a></li>
+      <li><a href="#song">20. Tänään otetaan
+        <small>Tänään otetaan, tänään otetaan...</small></a></li>
+      <li><a href="#song">21. Vahtimestari
+        <small>Hei vahtimestari, tule täytä lasini...</small></a></li>
+      <li data-theme="d" data-icon="check"><a href="#song-sung">3. Vesipoikien marssi
+        <small>Pois se meistä, että täällä maisteltais...</small></a></li>
+      <li><a href="#song">4. Viljaviinaa
+        <small>Viljaviinaa, laitetaan...</small></a></li>
     </ul>
   </div><!-- /content -->
 
@@ -207,7 +282,7 @@
 	</div><!-- /content -->
 
   <div data-role="footer" data-position="fixed">
-   <a href="#index" data-role="button" data-theme="b">Laulettu</a>
+   <a href="#index" data-role="button">Kumoa laulettu</a>
   </div><!-- /footer -->
 
 </div><!-- /page -->
