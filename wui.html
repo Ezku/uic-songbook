@@ -29,7 +29,6 @@
         $('.ui-input-search input').val(tag).trigger('change');
         return false;
       });
-      alert('done');
     });
     
     // On page load
@@ -38,7 +37,6 @@
     });
     
     function moveElement(event) {
-      //alert('ff');
       var elem = $(event.target).parents('li');
       
       //If it's already added, return back
@@ -99,7 +97,33 @@
 		list-style: none;
 		margin-bottom: 3em;
 	}
+	
+	#instructions div {
+	  width: 300px;
+	  max-width: 95%;
+	  padding: 40px 0;
+	  margin: 0 auto;
+	  border-radius: 20px;
+	  background-color: #eee;
+	}
+	
+	#trifecta-1 {
+	  background: 0px -30px no-repeat url(images/sl1.png);
+	}
 
+  #trifecta-2 {
+    background: 0px -10px no-repeat url(images/sl2.png);
+  }
+  
+  #trifecta-3 {
+    background: 0px -10px no-repeat url(images/sl3.png);
+  }
+  
+  #longintro {
+    text-align: center;
+    margin-bottom: 2.5em;
+  }
+  
 	.num {
 		font-size: 600%;
 		display: block;
@@ -138,6 +162,12 @@
   .ui-li-aside {
     margin: 1em 40px 0 0;
   }
+  
+  #publish .ui-body-c {
+    width: 50%;
+    padding: 0 1em;
+    margin: 1em 0;
+  }
 	</style>
 </head> 
 
@@ -161,18 +191,39 @@
 		<h1 class="main">Sähköläsy</h1>
 		<ol class="ui-grid-b" id="instructions">
 			<li class="ui-block-a">
+			  <div id="trifecta-1">
 			  <span class="num">1</span>
-			  <strong>Kerää biisejä</strong></li>
+			  <strong>Kerää lauluja</strong>
+			  </div>
+			  </li>
+			  
 			<li class="ui-block-b">
+			  <div id="trifecta-2">
 			  <span class="num">2</span>
-			  <strong>Viimeistele läsy</strong></li>
+			  <strong>Koosta läsy</strong>
+			  </div>
+			  </li>
 			<li class="ui-block-c">
+			  <div id="trifecta-3">
 			  <span class="num">3</span>
-			  <strong>Jaa juhlakansalle</strong></li>
+			  <strong>Jaa juhlakansalle</strong>
+			  </div>
+			  </li>
 		</ol>
-		<p>
-		  Foofoo
-		</p>
+		<div id="longintro">
+  		<p>
+  		  Selaa haluamiasi lauluja nimen, kategorian tai tagien mukaan ja valitse haluamasi laulut.
+  		</p>
+  		<p>
+  		  Muokkaa laulujen sanoja ja laulujen järjestystä läsyssä.
+  		</p>
+  		<p>
+  		  Julkaise läsysi suoraan osallistujien mobiililaitteille -
+        saat linkin mobiililäsyyn, jota voit jakaa sähköpostilla, IRCissä tai Facebookissa.
+      <p>
+        Lisäksi saat lukkaristolle ajolistan, jota voi käyttää sormitietokoneella.
+  		</p>
+		</div>
 		<a href="#browse" data-role="button" data-theme="a">Aloita</a>
 	</div><!-- /content -->
 
@@ -1008,7 +1059,7 @@
 <div data-role="page" id="edit">
 
 	<div data-role="header">
-		<a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+		<a href="#browse" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
 		<h1>Sähköläsy</h1>
 		<div data-role="navbar">
 			<ul>
@@ -1097,7 +1148,7 @@ nenä on kuin porvariston vaatehenkari. :,:</textarea>
 <div data-role="page" id="publish">
 
 	<div data-role="header">
-		<a href="#intro" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
+		<a href="#edit" data-role="button" data-icon="arrow-l" data-direction="reverse">Takaisin</a>
 		<h1>Sähköläsy</h1>
 		<div data-role="navbar">
 			<ul>
@@ -1110,33 +1161,31 @@ nenä on kuin porvariston vaatehenkari. :,:</textarea>
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<h2>Läsy on julkaisukunnossa</h2>
+		<h2>Läsy on julkaisukunnossa, onneksi olkoon!</h2>
 
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<h3>Julkaisu</h3>
-				<p>Voit julkaista läsyn jakamalla juhlijoille tämän linkin:</p>
-			</div>
-			<div class="ui-block-b">
-				<h3>Lukkareille</h3>
-				<p>Läsyn lukkariversioon pääsee käsiksi seuraavasta linkistä:</p>
-			</div>
-			<div class="ui-block-c">
-				<h3>Muokkaaminen</h3>
-				<p>Voit palata muokkaamaan läsyä uudelleen laittamalla talteen tämän linkin:</p>
-			</div>
-		</div>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="mobile.html" data-role="button" data-transition="fade">Läsy</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="tablet.html" data-role="button" data-transition="fade">Ajolista</a>
-			</div>
-			<div class="ui-block-c">
-				<a href="wui.html#browse" data-role="button" data-transition="fade">Muokkaus</a>
-			</div>
-		</div>
+        <div class="ui-body-c">
+  				<h3>Julkaisu</h3>
+  				<p>Voit julkaista läsyn jakamalla juhlijoille tämän linkin:</p>
+  				<p>
+  				    <a href="#">http://www.sahkolasy.fi/lasy/aFgY1F5gvD</a>
+  				</p>
+				</div>
+				
+				<div class="ui-body-c">
+  				<h3>Lukkareille</h3>
+  				<p>Läsyn lukkariversioon (ajolista) pääsee käsiksi seuraavasta linkistä:</p>
+          <p>
+              <a href="#">http://www.sahkolasy.fi/ajolista/j1gEdLg22h</a>
+          </p>
+        </div>
+        
+        <div class="ui-body-c">
+  				<h3>Muokkaaminen</h3>
+  				<p>Voit palata muokkaamaan läsyä uudelleen laittamalla talteen tämän linkin:</p>
+          <p>
+              <a href="#">http://www.sahkolasy.fi/muokkaa/a1FwFoO2hm</a>
+          </p>
+        </div>
         
         <p>Kun olet pistänyt linkkien osoitteet talteen, läsy on valmis. Nähdään sitseillä!</p>
 	</div><!-- /content -->
