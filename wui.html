@@ -47,6 +47,9 @@
 		/* Indicate sortability */
 		cursor: move;
 	}
+	.feedback-request {
+		text-align: center;
+	}
 	</style>
 </head> 
 
@@ -939,7 +942,7 @@
        <div class="ui-block-a">
         	
         	<h2>Järjestä kappaleet</h2>
-        	
+
             <ol class="songs" data-role="listview" data-inset="true">
                 <li>
                     Laulu hallituksesta
@@ -1069,22 +1072,41 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-        <p style="text-align:center;">
-        Olet onnistuneesti luonut oman Sähköläsysi!<br />
-        Seuraavaksi voit julkaista tai palata muokkaamaan juuri luomaasi läsyä alla olevien linkkien kautta.
-        </p>
-        <ul style="list-style-type:none; text-align:center;">
-            <li>Julkaistava linkki - <a href="" >http://www.sahkolasy.fi/</a></li>
-            <li>Admin linkki - <a href="" >http://www.sahkolasy.fi/</a></li>
-        </ul>
-        <p style="text-align:center;">
-        Voit jättää palautetta kokemuksistasi osoiteeseen support@sahkolasy.fi.
-        </p>
+		<h2>Läsy on julkaisukunnossa</h2>
+
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<h3>Julkaisu</h3>
+				<p>Voit julkaista läsyn jakamalla juhlijoille tämän linkin:</p>
+			</div>
+			<div class="ui-block-b">
+				<h3>Lukkareille</h3>
+				<p>Läsyn lukkariversioon pääsee käsiksi seuraavasta linkistä:</p>
+			</div>
+			<div class="ui-block-c">
+				<h3>Muokkaaminen</h3>
+				<p>Voit palata muokkaamaan läsyä uudelleen laittamalla talteen tämän linkin:</p>
+			</div>
+		</div>
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<a href="mobile.html" data-role="button">Läsy</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="tablet.html" data-role="button">Ajolista</a>
+			</div>
+			<div class="ui-block-c">
+				<a href="#browse" data-role="button">Muokkaus</a>
+			</div>
+		</div>
         
-		<a href="#intro" data-role="button">Aloita alusta</a>
+        <p>Kun olet pistänyt linkkien osoitteet talteen, läsy on valmis. Nähdään sitseillä!</p>
 	</div><!-- /content -->
 
-	<div data-role="footer">
+	<div data-role="footer" class="feedback-request">
+        <p>
+        Toimiko Sähköläsy? Voit jättää palautetta kokemuksistasi osoitteeseen <a href="#">support@sahkolasy.fi</a>.
+        </p>
 	</div><!-- /footer -->
 
 </div><!-- /page -->
