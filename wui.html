@@ -10,28 +10,43 @@
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.0.css" />
 	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.sortable.min.js"></script>
+    <script type="text/javascript">
+    // On jQuery Mobile init
+    $(document).bind("mobileinit", function() {
+    	console.log("lol");
+    });
+    // On page load
+    $(function() {
+    	$("#edit .songs").sortable();
+    });
+    </script>
 	<script type="text/javascript" src="js/jquery.mobile-1.0.js"></script>
 	
 	<style type="text/css">
-	  h1.main {
-	    text-align: center;
-	    font-size: 600%;
-	    margin: 0.5em 0;
-	  }
-	  
-	  #instructions {
-	    text-align: center;
-	    list-style: none;
-	    margin-bottom: 3em;
-	  }
-	  
-	  .num {
-	    font-size: 600%;
-	    display: block;
-	  }
-	  
-	  .extra { font-size:10px; text-align:right; margin-top:-15px; }
-    .name { text-align:left; }
+	h1.main {
+		text-align: center;
+		font-size: 600%;
+		margin: 0.5em 0;
+	}
+
+	#instructions {
+		text-align: center;
+		list-style: none;
+		margin-bottom: 3em;
+	}
+
+	.num {
+		font-size: 600%;
+		display: block;
+	}
+
+	.extra { font-size:10px; text-align:right; margin-top:-15px; }
+	.name { text-align:left; }
+	#edit .songs li {
+		/* Indicate sortability */
+		cursor: move;
+	}
 	</style>
 </head> 
 
@@ -923,154 +938,97 @@
     <div class="ui-grid-a" data-role="content">
        <div class="ui-block-a">
         
-            <ul class="songs" data-role="listview" data-inset="true">
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right" data-inline="true">Laulu hallituksesta
-                        <div class="extra">Aatteellista (<strong>#venäjä</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c" data-inline="true"></a>
+            <ol class="songs" data-role="listview" data-inset="true">
+                <li>
+                    Laulu hallituksesta
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Sörkan sällit
-                        <div class="extra">Aatteellista (<strong>#venäjä</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Sörkan sällit
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Alla borde kännä till
-                        <div class="extra">Juomalauluja (<strong>#viina #ruotsiksi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Alla borde kännä till
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Aqua Vera
-                        <div class="extra">Juomalauluja (<strong>#vesi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Aqua Vera
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Eino Leinon juomalaulu
-                        <div class="extra">Juomalauluja (<strong>#fuksi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Eino Leinon juomalaulu
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Finsk snapsvisa
-                        <div class="extra">Juomalauluja (<strong>#ruotsiksi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Finsk snapsvisa
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Jaloviinaa tahdon juoda
-                        <div class="extra">Juomalauluja (<strong>#jallu</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Jaloviinaa tahdon juoda
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Jos eukkosi kieltää
-                        <div class="extra">Juomalauluja (<strong>#naiset #laululeikki</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Jos eukkosi kieltää
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Ko-ko-ko-kosken ko-ko-ko-korvaa
-                        <div class="extra">Juomalauluja (<strong>#viina</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Ko-ko-ko-kosken ko-ko-ko-korvaa
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">No onkos tullut kesä - nyt!
-                        <div class="extra">Juomalauluja (<strong>#viina #laululeikki #koveri</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    No onkos tullut kesä - nyt!
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Paavi ja sulttaani
-                        <div class="extra">Juomalauluja (<strong>#naiset #viini</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Paavi ja sulttaani
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Pienet konjakit
-                        <div class="extra">Juomalauluja (<strong>#konjakki</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Pienet konjakit
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Pyöreän pöydän ritarit
-                        <div class="extra">Juomalauluja (<strong>#viini #laululeikki </strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Pyöreän pöydän ritarit
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Vesipoikien marssi
-                        <div class="extra">Juomalauluja (<strong>#vesi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Vesipoikien marssi
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Dance macabre
-                        <div class="extra">Loppuilta (<strong>#poli</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Dance macabre
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Hullu kirvesmies
-                        <div class="extra">Loppuilta</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Hullu kirvesmies
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Pikku kakkosen posti
-                        <div class="extra">Loppuilta (<strong>#koveri</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Pikku kakkosen posti
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Takki pois
-                        <div class="extra">Loppuilta (<strong>#takki #miehet</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Takki pois
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Voi virsua voi
-                        <div class="extra">Loppuilta (<strong>#viina</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Voi virsua voi
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Henkilökunta
-                        <div class="extra">Perinteistä (<strong>#tarjoilua #viina</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Henkilökunta
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Hyvät ystävät
-                        <div class="extra">Perinteistä (<strong>#poli</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Hyvät ystävät
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Ikuisen teekkarin laulu
-                        <div class="extra">Perinteistä (<strong>#poli</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Ikuisen teekkarin laulu
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Viimeisen teekkarin laulu
-                        <div class="extra">Perinteistä (<strong>#poli</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Viimeisen teekkarin laulu
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Nisti ja nööri
-                        <div class="extra">Romanttista (<strong>#yliopisto #koveri</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Nisti ja nööri
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Tupakka, whisky ja villis naiset
-                        <div class="extra">Romanttista (<strong>#tupakka #naiset #whisky #soolo</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Tupakka, whisky ja villit naiset
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Elomme päivät epäselvät
-                        <div class="extra">Tulevaisuudesta (<strong>#viina</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Elomme päivät epäselvät
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Minne
-                        <div class="extra">Tulevaisuudesta</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Minne
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Tänään otetaan
-                        <div class="extra">Tulevaisuudesta (<strong>#viina</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Tänään otetaan
                 </li>
-                <li data-role="controlgroup" data-type="horizontal">
-                    <a class="name" href="#" data-role="button" data-icon="gear" data-iconpos="right">Vart
-                        <div class="extra">Tulevaisuudesta (<strong>#ruotsiksi</strong>)</div></a>
-                    <a data-role="button" data-icon="minus" data-theme="c"></a>
+                <li>
+                    Vart
                 </li>
             </ul>
         </div><!-- /ui-block-a -->
+
             
         <div class="ui-block-b">
             <h2>Kootut kappaleet</h2>
