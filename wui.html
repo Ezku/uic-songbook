@@ -16,10 +16,74 @@
     $(document).bind("mobileinit", function() {
     	console.log("lol");
     });
+    
+    $(document).bind("pageinit", function() {
+      $('.songlist li').not('.ui-li-divider').click(moveElement);
+      $('.songlist li .ui-li-aside strong a').click(function(event){
+        event.stopPropagation();
+        var tag = $(event.target).text();
+        //Move to same page to clear tags
+        $.mobile.changePage($.mobile.activePage);
+        //Scroll to top so user understands we "changed" page
+        $.mobile.silentScroll(0);
+        $('.ui-input-search input').val(tag).trigger('change');
+        return false;
+      });
+      alert('done');
+    });
+    
     // On page load
     $(function() {
     	$("#edit .songs").sortable();
     });
+    
+    function moveElement(event) {
+      //alert('ff');
+      var elem = $(event.target).parents('li');
+      
+      //If it's already added, return back
+      if(elem.parents('#selected-cat').size() > 0 || elem.parents('#selected-alpha').size() > 0) {
+        moveBack(elem);
+      } else {
+        moveToSelected(elem);
+      }
+      
+      updateListCount($('#selected-alpha'));
+      updateListCount($('#selected-cat'));
+      
+      $('#selected-alpha').listview('refresh');
+      $('#selected-cat').listview('refresh');
+      $('.songlist').listview('refresh');
+      
+    }
+    
+    function moveToSelected(elem) {
+      var orig = $('<li></li>').hide();
+      elem.data('orig', orig);
+      elem.after(orig);
+      
+      elem.find('.ui-icon-plus').removeClass('ui-icon-plus').addClass('ui-icon-minus');
+      
+      var parent = $('#selected-cat');
+      //selected-cat + selected-alpha
+      if(elem.parents('#browse').size() > 0) {
+        parent = $('#selected-alpha');
+      }
+      
+      parent.append(elem);
+    }
+    
+    function moveBack(elem) {
+      elem.find('.ui-icon-minus').removeClass('ui-icon-minus').addClass('ui-icon-plus');
+      var orig = elem.data('orig');
+      orig.replaceWith(elem);
+    }
+    
+    function updateListCount(parent) {
+      var count = parent.find('li').size() - 1;
+      parent.find('.ui-li-count').html(count);
+    }
+    
     </script>
 	<script type="text/javascript" src="js/jquery.mobile-1.0.js"></script>
 	
@@ -50,6 +114,30 @@
 	.feedback-request {
 		text-align: center;
 	}
+	
+	#browse .ui-content .ui-block-a,
+	#browse-category .ui-content .ui-block-a {
+	  width: 55%;
+	  margin: 0 2%;
+	}
+	
+	#browse .ui-content .ui-block-b,
+	#browse-category .ui-content .ui-block-b {
+    width: 40%;
+  }
+  
+  #edit .ui-content .ui-block-a {
+    width: 47%;
+    margin: 0 2%;
+  }
+  
+  #edit .ui-content .ui-block-b {
+    width: 47%;
+  }
+  
+  .ui-li-aside {
+    margin: 1em 40px 0 0;
+  }
 	</style>
 </head> 
 
@@ -119,7 +207,8 @@
                 </div>
             </div>
             
-			<ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia...">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia..."
+			 data-inset="true" class="songlist">
 				<li data-role="list-divider"><h4>A</h4></li>
 				<li data-icon="plus">
 					<a href="#">Aamulla kun heräsin</a>
@@ -500,13 +589,8 @@
         
 		<div class="ui-block-b">
 			<h2>Kootut kappaleet</h2>
-			<ul data-role="listview" data-inset="true">
-				<li data-role="list-divider"><h4>Yhteensä</h4> <span class="ui-li-count">14</span></li>
-				<li data-role="list-divider"><h4>Asiallista</h4> <span class="ui-li-count">1</span></li>
-				<li data-icon="minus">
-                    <a href="#">Aqua Vera</a>
-                    <p class="ui-li-aside">(<strong><a href="#">#vesi</a></strong>)</p>
-                </li>
+			<ul data-role="listview" data-inset="true" id="selected-alpha">
+				<li data-role="list-divider"><h4>Yhteensä</h4> <span class="ui-li-count">0</span></li>
 			</ul>
 			<a href="#edit" data-theme="a" data-role="button" data-icon="arrow-r" data-iconpos="right">Koosta läsy</a>
 		</div>
@@ -543,7 +627,8 @@
                 </div>
             </div>
                 
-            <ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia...">
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Rajaa tuloksia..."
+              data-inset="true" class="songlist">
                 <li data-role="list-divider"><h4>Aatteellista</h4></li>
                 <li data-icon="plus">
                     <a href="#">Barrikaadilaulu</a>
@@ -908,11 +993,8 @@
         
         <div class="ui-block-b">
             <h2>Kootut kappaleet</h2>
-            <ul data-role="listview" data-inset="true">
-                <li data-role="list-divider"><h4>Yhteensä</h4> <span class="ui-li-count">14</span></li>
-                <li data-role="list-divider"><h4>Asiallista</h4> <span class="ui-li-count">1</span></li>
-                <li data-icon="minus"><a href="#">Aqua Vera</a>
-                    <p class="ui-li-aside">(<strong><a href="#">#vesi</a></strong>)</p></li>
+            <ul data-role="listview" data-inset="true" id="selected-cat">
+                <li data-role="list-divider"><h4>Yhteensä</h4> <span class="ui-li-count">0</span></li>
             </ul>
 			<a href="#edit" data-theme="a" data-role="button" data-icon="arrow-r" data-iconpos="right">Koosta läsy</a>
         </div>
