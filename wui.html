@@ -14,7 +14,6 @@
     <script type="text/javascript">
     // On jQuery Mobile init
     $(document).bind("mobileinit", function() {
-    	console.log("lol");
     });
     
     $(document).bind("pageinit", function() {
@@ -99,6 +98,7 @@
 
 	#instructions {
 		text-align: center;
+		font-size: 1.5em;
 		list-style: none;
 		margin-bottom: 3em;
 	}
@@ -113,24 +113,24 @@
 	}
 	
 	#trifecta-1 {
-	  background: 0px -30px no-repeat url(images/sl1.png);
+		background: 0px -30px no-repeat url(images/sl1.png);
 	}
 
-  #trifecta-2 {
-    background: 0px -10px no-repeat url(images/sl2.png);
-  }
-  
-  #trifecta-3 {
-    background: 0px -10px no-repeat url(images/sl3.png);
-  }
-  
-  #longintro {
-    text-align: center;
-    margin-bottom: 2.5em;
-  }
+	#trifecta-2 {
+		background: 0px -10px no-repeat url(images/sl2.png);
+	}
+
+	#trifecta-3 {
+		background: 0px -10px no-repeat url(images/sl3.png);
+	}
+
+	#longintro {
+		text-align: center;
+		margin-bottom: 2.5em;
+	}
   
 	.num {
-		font-size: 600%;
+		font-size: 5em;
 		display: block;
 	}
 
@@ -169,6 +169,7 @@
   }
   
   #publish .ui-body-c {
+  	min-width: 20em;
     width: 50%;
     padding: 0 1em;
     margin: 1em 0;
